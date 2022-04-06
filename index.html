@@ -1,0 +1,126 @@
+<html>
+<head>
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+<body>
+    
+        
+<form name ="dis">
+    <input type ="text" class="e" name="p" value="0">
+<br>
+<div class="f">
+    <button class ="a" id="b" " name="l"  onclick= "fsin()">sin</button>
+<button class ="a" id="b" name="m"  onclick= "fcos()">cos</button>
+<button class ="a" id="b" name="n"  onclick= "ftan()">tan</button>
+<button class ="a" id="b"  name="p">pow</button>
+
+<button class ="a" id="c" name="q"  >C</button>
+<button class ="a" id="c" name="r"  >+/-</button>
+<button class ="a" id="c" name="s"  >%</button>
+<button class ="a" id="b"  name="t"  >/</button>
+
+<button class ="a" id="d"  name="h"  onclick="f7()">7</button>
+<button class ="a" id="d"  name="i"  onclick="f8()">8</button>
+<button class ="a" id="d"   name="j"  onclick="f9()">9</button>
+<button class ="a" id="b"  onclick="enter(this.form, multiply)" >X</button>
+
+<button class ="a" id="d" name="e"  onclick="f4()">4</button>
+<button class ="a" id="d" name="f"  onclick="f5()">5</button>
+<button class ="a" id="d" name="g"  onclick="f6()">6</button>
+<button class ="a" id="b" onclick="enter(this.form, minus)"  >-</button>
+
+<button class ="a" id="d" name="b"  onclick="f1()">1</button>
+<button class ="a" id="d" name="c"  onclick="f2()">2</button>
+<button class ="a" id="d" name="d" " onclick="f3()">3</button>
+<button class ="a" id="b" onclick="enter(this.form, plus)"  >+</button>
+
+
+<button class ="a" id="d" name="k"  onclick="f0()">0</button>
+
+<button class ="a" id="d" onclick="enter(this.form, decimal)">.</button>
+<button class ="a" id="b" onclick="compute(this.form)"type="button">=</button>
+<button class ="a" id="b"onclick="clear(this.form)" style="padding:50px;" type="reset" >AC</button>
+
+</div>
+
+</form>
+<script>
+    function f1()
+    {
+    dis.p.value = dis.p.value + '1';
+    }
+    function f2()
+    {
+    a.value=a.value+'2';
+    }
+    function f3()
+    {
+    a.value=a.value+"3";
+    }
+    function f4()
+    {
+    a.value=a.value+"4";
+    }
+    function f5()
+    {
+    a.value=a.value+"5";
+    }
+    function f6()
+    {
+    a.value=a.value+"6";
+    }
+    function f7()
+    {
+    a.value=a.value+"7";
+    }
+    function f8()
+    {
+    a.value=a.value+"8";
+    }
+    function f9()
+    {
+    a.value=a.value+"9";
+    }
+    function f0()
+    {
+    a.value=a.value+"0";
+    }
+    function fsin()
+    {
+    
+    var y= Number(a.value);
+    var z= Math.sin(y* Math.PI / 180);
+    var u=z.toString();
+    a.value=u;
+    }
+    function fcos()
+    {
+    
+    var y= Number(a.value);
+    var z= Math.cos(y* Math.PI / 180);
+    var u=z.toString();
+    a.value=u;
+    }
+    function ftan()
+    {
+    
+    var y= Number(a.value);
+    var z= Math.tan(y* Math.PI / 180);
+    var u=z.toString();
+    a.value=u;
+    }
+    var plus = '+';
+    var minus = '-';
+    var multiply = '*';
+    var divide = '/';
+    var decimal = '.';
+    function compute(obj){
+    (obj.expr.value=eval(obj.expr.value);}
+    function enter(obj, string); 
+    {obj.expr.value += string;}
+    function clear(obj) 
+    {obj.expr.value = '';}
+    </script>
+</body>
+</html>
